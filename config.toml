@@ -1,4 +1,4 @@
-baseURL = "https://visualcomputing.github.io/vc"
+baseURL = "https://jpreciadom.github.io/Visual-Computing-2021-2S/"
 languageCode = "en-us"
 title = "Visual Computing"
 theme = 'book'
