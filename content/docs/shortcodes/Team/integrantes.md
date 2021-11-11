@@ -24,3 +24,12 @@ Estudiante de ingeniería de sistemas de la Universidad nacional de Colombia.
 Tengo 22 años, me encanta nadar, hacer deporte, leer y escribir.
 Quiero enfocarme en desarrollo web, específicamente front end.
 {{< /expand >}}
+
+# Gustavo Gálvez Bello
+{{< expand >}}
+## Gustavo Gálvez Bello
+Soy estudiante de noveno semestre de ingeniería de sistemas y computación de la Universidad Nacional de Colombia.
+Tengo 26 años, amo los animales, en especial los perros, me gusta mucho hacer ejercicio, escuchar música y comer hamburguesas.
+Con respecto a la carrera, me gustan temas como desarrollo web, estadística y gestión de proyectos.
+{{< /expand >}}
+
