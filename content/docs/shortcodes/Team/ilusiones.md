@@ -18,7 +18,7 @@ Consiste en dos circulos de idéntico tamaño, que se colocan uno cerca de otro,
 Su percepción de tamaño depende de la distancia y tamaño de los circulos a su alrededor.
 (https://antroporama.net/la-ilusion-de-ebbinghaus-y-las-rutas-visuales/)
 
-{{< p5-iframe sketch="/Visual-Computing-2021-2S/sketches/ebbinghaus.js" width="425" height="425">}}
+{{< p5-iframe sketch="/Visual-Computing-2021-2S/sketches/ebbinghaus.js" width="675" height="425">}}
 
 # Ilusión efecto entrelazado de Pinna
 Esta ilusión óptica es conocida como "intertwining effect" fue creada por el Dr. Baingio Pinna, investigador del Departamento de Ciencias del Lenguaje de la Universidad de Sassari, Italia. Dado que la tarea de un sistema sensorial es dar una representación fiel de los eventos biológicamente relevantes en el mundo externo, esto se logra a través de cálculos complejos neuronales para crear representaciones informativas del entorno externo.
