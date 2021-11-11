@@ -24,7 +24,7 @@ Su percepción de tamaño depende de la distancia y tamaño de los circulos a su
 Esta ilusión óptica es conocida como "intertwining effect" fue creada por el Dr. Baingio Pinna, investigador del Departamento de Ciencias del Lenguaje de la Universidad de Sassari, Italia. Dado que la tarea de un sistema sensorial es dar una representación fiel de los eventos biológicamente relevantes en el mundo externo, esto se logra a través de cálculos complejos neuronales para crear representaciones informativas del entorno externo.
 (https://www.anopticalillusion.com/2013/12/pinnas-illusory-intertwining-effect/)
 
-{{< p5-iframe sketch="/Visual-Computing-2021-2S/sketches/pinna.js" width="560" height="560">}}
+{{< p5-iframe sketch="/Visual-Computing-2021-2S/sketches/pinna.js" width="425" height="425">}}
 
 ## ¿Qué se puede observar?
 
