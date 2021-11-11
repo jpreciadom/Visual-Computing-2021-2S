@@ -4,7 +4,7 @@ function preload() {   // Añadimos una nueva función que nos
   img = loadImage("/Visual-Computing-2021-2S/sketches/pinna.jpg");
 }
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(560, 560);
 }
 function draw() {
   image(img, 0, 0); // Dibuja la imagen
