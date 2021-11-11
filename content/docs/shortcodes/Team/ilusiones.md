@@ -1,5 +1,5 @@
 ## Ilusión de Zollner
-Bastan unas pocas líneas para confundirnos. Como en esta ilusión descubierta por el astrofísico alemán Johann Karl Friedrich Zöllner en 1860. A pesar de que estas rectas son paralelas, parecen inclinarse por influencia de las líneas diagonales.
+Bastan unas pocas líneas para confundirnos. Como en esta ilusión descubierta por el astrofísico alemán Johann Karl Friedrich Zöllner en 1860. A pesar de que estas rectas son paralelas, parecen inclinarse por influencia de las líneas diagonales. Existen diferentes variaciones como el grosor de las líneas, la distancia entre las rectas paralelas e incluso el ángulo de las líneas pequeñas. Aún con estas variantes la ilusión sigue siendo efectiva. (https://www.educaplus.org/game/ilusion-de-zollner)
 
 {{< p5-iframe sketch="/Visual-Computing-2021-2S/sketches/zollner.js" width="425" height="425">}}
 
