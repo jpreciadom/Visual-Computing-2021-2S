@@ -1,7 +1,7 @@
 var img;   // Definimos una variable para almacenar la imagen
 function preload() {   // Añadimos una nueva función que nos 
                        // carga la imagen
-  img = loadImage("/vc/sketches/ebbinghaus.png");
+  img = loadImage("/Visual-Computing-2021-2S/sketches/ebbinghaus.png");
 }
 function setup() {
   createCanvas(480, 120);
