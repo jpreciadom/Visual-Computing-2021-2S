@@ -4,7 +4,7 @@ function preload() {   // Añadimos una nueva función que nos
   img = loadImage("/Visual-Computing-2021-2S/sketches/ebbinghaus.png");
 }
 function setup() {
-  createCanvas(480, 120);
+  createCanvas(650, 400);
 }
 function draw() {
   image(img, 0, 0); // Dibuja la imagen
