@@ -10,5 +10,6 @@ function setup() {
 }
 
 function draw() {
-    gif_createImg.position(50, 350);
+  image(img, 0, 0);
+  //gif_createImg.position(50, 350);
 }
