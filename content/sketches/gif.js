@@ -6,9 +6,10 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(589, 589);
+  createCanvas(600, 600);
 }
 
 function draw() {
+    image(gif_createImg, 0, 0);
     gif_createImg.position(50, 50);
 }
