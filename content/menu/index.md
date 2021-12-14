@@ -13,4 +13,5 @@ headless: true
 - [Tabs]({{< relref "/docs/shortcodes/tabs" >}})
 - [Integrantes]({{< relref "/docs/Team/integrantes" >}})
 - [Ilusiones]({{< relref "/docs/Team/ilusiones" >}})
+- [Algoritmo]({{< relref "/docs/Team/algoritmo_warnock" >}})
 <br />
