@@ -10,5 +10,5 @@ function setup() {
 }
 
 function draw() {
-    image(gif_loadImg, 0, 0); // Dibuja la imagen
-  }
+    image(gif_loadImg, 50, 50);
+}
