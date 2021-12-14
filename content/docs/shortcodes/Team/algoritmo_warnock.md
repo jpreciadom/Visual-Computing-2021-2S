@@ -1,6 +1,7 @@
 ## Algoritmo de Warnock (Algoritmo de subdivisión de área)
 Hoy hablaremos de un algoritmo de visibilidad desarrollado por el científico de la computación John Warnock.
 Este algoritmo tiene como principal objetivo determinar las superficies ocultas en una imagen compleja para poder ilustrarla.
+
 Warnock utilizó el método de divide y vencerás dividiendo la escena en 4 partes iguales dependiendo de ciertos criterios (que veremos después en la sección de explicación del algoritmo)para resolver este problema de forma recursiva. Estas subdivisiones en cada caso serán llamadas área de interés.
 
 Antes de entrar en detalles sobre el funcionamiento del algoritmo, hablaremos un poco sobre qué consideraciones es necesario tener a la hora de implementar el algoritmo.
