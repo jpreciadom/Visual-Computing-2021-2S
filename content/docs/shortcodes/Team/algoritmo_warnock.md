@@ -59,3 +59,10 @@ La lista de polígonos se determina usando los valores z de coordenadas de los v
 ## Ejemplo
 
 {{< p5-iframe sketch="/Visual-Computing-2021-2S/sketches/warnock_exa.js" width="540" height="375" >}}
+
+## Referencias
+
+- Algoritmos de visibilidad: https://grafica2016a.files.wordpress.com/2016/03/algoritmos-de-visibilidad.pdf
+- Warnock´s algorithm: http://medialab.di.unipi.it/web/IUM/Waterloo/node68.html
+- Warnock's Algorithm (Area Subdivision Algorithm) https://www.ques10.com/p/22069/explain-warnocks-algorithm-used-to-remove-hidden-s/
+- Algoritmo de Warnock: https://es.wikipedia.org/wiki/Algoritmo_de_Warnock
