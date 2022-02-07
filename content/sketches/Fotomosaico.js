@@ -5,8 +5,7 @@ new p5((p) => {
   const imagesPaths = [
   ];
 
-  const loadedImages = [
-  ];
+  const loadedImages = [];
 
   // Nuesta imagen objetivo
   let targetImage;
@@ -31,7 +30,6 @@ new p5((p) => {
       const { width, height } = img;
       const image = p.createImage(scl, scl, p.RGB);
       image.copy(img, 0, 0, width, height, 0, 0, scl, scl);
-      image.loadPixels();
       return image;
     });
 
@@ -41,6 +39,8 @@ new p5((p) => {
     
     // Calcular el brillo promedio de cada imagen
     allImages.forEach((image) => {
+      image.loadPixels();
+
       let avgBrightness = 0;
       image.pixels.forEach((pixel) => {
         avgBrightness += p.brightness(pixel);
@@ -61,6 +61,7 @@ new p5((p) => {
           brightImages[i] = allImages[idx];
         }
       });
+      break;
     }
     setSmallerTargetImage();
   }
@@ -90,14 +91,14 @@ new p5((p) => {
 
   p.setup = function () {
     const { width, height } = targetImage;
-    p.createCanvas(width, height + 15);
+    p.createCanvas(width, height + 50);
     p.strokeWeight(0); // medium weight lines
     p.smooth(); // antialias lines
 
     setAllVariables();
 
-    const slider = p.createSlider(1, width, scl, 1);
-    slider.position(20, height + 15);
+    const slider = p.createSlider(10, width, scl, 1);
+    slider.position(20, height + 60);
     slider.size(width - 40);
     slider.input(slcValueChanged);
   };
@@ -108,7 +109,7 @@ new p5((p) => {
     if (allImages.length > 0) {
       for (let x = 0; x < w; x++) {
         for (let y = 0; y < h; y++) {
-          const index = (x + (y * w)).toFixed(0);
+          const index = Number((x + y * w).toFixed(0));
           const c = smallerTargetImage.pixels[index];
 
           const imageIndex = Number(p.brightness(c).toFixed(0));
