@@ -3,6 +3,26 @@ new p5((p) => {
   // Remove this later
   const basePath = "/Visual-Computing-2021-2S/assets/photomosaic/";
   const imagesPaths = [
+    'p1.jpeg',
+    'p2.jpeg',
+    'p3.jpeg',
+    'p4.jpeg',
+    'p5.jpeg',
+    'p6.jpeg',
+    'p7.jpeg',
+    'p8.jpeg',
+    'p9.jpeg',
+    'p10.jpeg',
+    'p11.jpeg',
+    'p12.jpeg',
+    'p13.jpeg',
+    'p14.jpeg',
+    'p15.jpeg',
+    'p16.jpeg',
+    'p17.jpeg',
+    'p18.jpeg',
+    'p19.jpeg',
+    'p20.jpeg',
   ];
 
   const loadedImages = [];
@@ -16,12 +36,11 @@ new p5((p) => {
   // Imagenes pro brillo
   let brightImages = {};
 
-  let scl = 16;
-  let w, h;
+  let scl = 1;
 
   function slcValueChanged() {
     scl = this.value();
-    setSmallerTargetImage();
+    setAllVariables();
   }
 
   function setAllVariables() {
@@ -51,7 +70,7 @@ new p5((p) => {
     });
 
     // Selecciona la imagen cuyo brillo promedio
-    // mas se aproxima al brillo objetibo
+    // mas se aproxima al brillo objetivo
     for (let i = 0; i < 256; i++) {
       let record = 256;
       allImagesBrihtness.forEach((brightness, idx) => {
@@ -61,7 +80,6 @@ new p5((p) => {
           brightImages[i] = allImages[idx];
         }
       });
-      break;
     }
     setSmallerTargetImage();
   }
@@ -71,8 +89,8 @@ new p5((p) => {
     // objetivo
     const { width, height } = targetImage;
 
-    w = width / scl;
-    h = height / scl;
+    const w = width / scl;
+    const h = height / scl;
 
     smallerTargetImage = p.createImage(w, h, p.RGB);
     smallerTargetImage.copy(targetImage, 0, 0, width, height, 0, 0, w, h);
@@ -92,12 +110,10 @@ new p5((p) => {
   p.setup = function () {
     const { width, height } = targetImage;
     p.createCanvas(width, height + 50);
-    p.strokeWeight(0); // medium weight lines
-    p.smooth(); // antialias lines
 
     setAllVariables();
 
-    const slider = p.createSlider(10, width, scl, 1);
+    const slider = p.createSlider(1, 100, scl, 1);
     slider.position(20, height + 60);
     slider.size(width - 40);
     slider.input(slcValueChanged);
@@ -105,14 +121,18 @@ new p5((p) => {
 
   p.draw = function() {
     p.background(0);
+    let { width, height } = smallerTargetImage;
+    width = Math.floor(width);
+    height = Math.floor(height);
 
     if (allImages.length > 0) {
-      for (let x = 0; x < w; x++) {
-        for (let y = 0; y < h; y++) {
-          const index = Number((x + y * w).toFixed(0));
+      for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+
+          const index = (x + (y * width)) * 4;
           const c = smallerTargetImage.pixels[index];
 
-          const imageIndex = Number(p.brightness(c).toFixed(0));
+          const imageIndex = Math.floor(p.brightness(c));
           p.image(
             brightImages[imageIndex],
             x*scl,
@@ -124,6 +144,7 @@ new p5((p) => {
       }
     }
 
+    // p.image(smallerTargetImage, 0, 0);
     p.noLoop();
   };
 }, "Fotomosaico")
