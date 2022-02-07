@@ -20,6 +20,11 @@ new p5((p) => {
   let scl = 16;
   let w, h;
 
+  function slcValueChanged() {
+    scl = this.value();
+    setSmallerTargetImage();
+  }
+
   function setAllVariables() {
     // Reescalar las imagenes
     allImages = loadedImages.map((img) => {
@@ -57,7 +62,10 @@ new p5((p) => {
         }
       });
     }
+    setSmallerTargetImage();
+  }
 
+  function setSmallerTargetImage() {
     // Construye una copia más pequeña de la imagen
     // objetivo
     const { width, height } = targetImage;
@@ -68,6 +76,8 @@ new p5((p) => {
     smallerTargetImage = p.createImage(w, h, p.RGB);
     smallerTargetImage.copy(targetImage, 0, 0, width, height, 0, 0, w, h);
     smallerTargetImage.loadPixels();
+
+    p.loop();
   }
 
   p.preload = function () {
@@ -80,9 +90,16 @@ new p5((p) => {
 
   p.setup = function () {
     const { width, height } = targetImage;
-    p.createCanvas(width, height);
+    p.createCanvas(width, height + 15);
     p.strokeWeight(0); // medium weight lines
     p.smooth(); // antialias lines
+
+    setAllVariables();
+
+    const slider = p.createSlider(1, width, scl, 1);
+    slider.position(20, height + 15);
+    slider.size(width - 40);
+    slider.input(slcValueChanged);
   };
 
   p.draw = function() {
