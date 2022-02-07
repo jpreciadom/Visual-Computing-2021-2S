@@ -5,7 +5,7 @@ const request = require('request');
 const fs = require('fs');
 
 const word = "images";
-var url = 'https://www.istockphoto.com/es/foto/pralin%C3%A9s-de-chocolate-negro-gm1162200486-318703348';
+var url = 'https://www.lucushost.com/blog/10-webs-para-descargar-imagenes-gratis/';
 
 request(url, (e, res, html) => {
 

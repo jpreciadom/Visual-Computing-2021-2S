@@ -1,8 +1,11 @@
 new p5((p) => {
 
   // Remove this later
-  const basePath = "/Visual-Computing-2021-2S/assets/photomosaic/";
-  const imagesPaths = [
+  const basePath = "/Visual-Computing-2021-2S/sketches/images/";
+  const imagesPaths = ["ejemplo-imagen-allthefreestock.png", "ejemplo-imagen-gratisography.png", "ejemplo-imagen-magdeleine.png", "ejemplo-imagen-pexels.jpeg",
+  "ejemplo-imagen-pixabay.jpg", "ejemplo-imagen-stockio.jpg", "ejemplo-imagen-stockpic.png", "ejemplo-imagen-unsplash.png", "ejemplo-imagen-visualhunt.jpg",
+  "herramientas-keyword-research-gratis-220x159.png", "imagen-gratis-freepik.png", "newsletter-que-es-y-para-que-sirve-220x159.jpg", "paginas-para-descargar-imagenes-gratis.png",
+  "que-es-un-bot-220x159.png"
   ];
 
   const loadedImages = [];
@@ -61,7 +64,6 @@ new p5((p) => {
           brightImages[i] = allImages[idx];
         }
       });
-      break;
     }
     setSmallerTargetImage();
   }
