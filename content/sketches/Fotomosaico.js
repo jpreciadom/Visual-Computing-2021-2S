@@ -54,7 +54,7 @@ new p5((p) => {
     });
 
     // Selecciona la imagen cuyo brillo promedio
-    // mas se aproxima al brillo objetibo
+    // mas se aproxima al brillo objetivo
     for (let i = 0; i < 256; i++) {
       let record = 256;
       allImagesBrihtness.forEach((brightness, idx) => {
